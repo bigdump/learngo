@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"github.com/spf13/viper"
+	"sync"
 )
 
 type Config struct {
@@ -11,7 +11,7 @@ type Config struct {
 	lock *sync.RWMutex
 }
 
-func main()  {
+func main() {
 	fmt.Println("read file test")
 	vp := viper.New()
 	vp.AddConfigPath("./global.toml")

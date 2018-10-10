@@ -33,7 +33,6 @@ func main() {
 
 }
 
-
 // OpCode is an EVM opcode
 type OpCode byte
 
@@ -216,7 +215,7 @@ const (
 	RETURN
 	DELEGATECALL
 
-	REVERT       = 0xfd
+	REVERT  = 0xfd
 	SUICIDE = 0xff
 )
 
@@ -370,7 +369,7 @@ var opCodeToString = map[OpCode]string{
 	RETURN:       "RETURN",
 	CALLCODE:     "CALLCODE",
 	DELEGATECALL: "DELEGATECALL",
-	REVERT:		"REVERT",
+	REVERT:       "REVERT",
 	SUICIDE:      "SUICIDE",
 
 	PUSH: "PUSH",
@@ -517,11 +516,10 @@ var stringToOp = map[string]OpCode{
 	"CALL":         CALL,
 	"RETURN":       RETURN,
 	"CALLCODE":     CALLCODE,
-	"REVERT":		REVERT,
+	"REVERT":       REVERT,
 	"SUICIDE":      SUICIDE,
 }
 
 func StringToOp(str string) OpCode {
 	return stringToOp[str]
 }
-

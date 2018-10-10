@@ -1,15 +1,15 @@
 package main
 
 import (
-	"runtime"
 	"fmt"
+	"runtime"
 )
 
 func main() {
 	var su = [100]int{100, 200}
 	m2 := make(map[int]int)
 	for i := 0; i < 1000; i++ {
-		su[0] ++
+		su[0]++
 		m2[i] = i
 	}
 	s := new(runtime.MemStats)

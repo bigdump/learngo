@@ -1,16 +1,16 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"reflect"
-	"errors"
 )
 
 type MyStruct struct {
 	name string
 }
 
-func (this *MyStruct)GetName() string {
+func (this *MyStruct) GetName() string {
 	return this.name
 }
 
