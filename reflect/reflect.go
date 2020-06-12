@@ -39,4 +39,9 @@ func main() {
 	b := reflect.ValueOf(a).MethodByName("GetName").Call([]reflect.Value{})
 	fmt.Println(b[0])
 
+	arr1 := [2]byte{12, 31}
+	arr2 := []byte{12, 31}
+	fmt.Println(reflect.TypeOf(arr1).Kind().String())
+	fmt.Println(reflect.TypeOf(arr2).Kind().String())
+	fmt.Println(reflect.Array.String())
 }
